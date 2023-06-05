@@ -74,8 +74,9 @@
                              <?= $item['kategori']; ?>
                          </td>
                          <td class="px-6 py-4">
-                             <?= $item['harga']; ?>
+                             <?= number_format($item['harga'], 0, ',', '.'); ?>
                          </td>
+
                          <td class="px-6 py-4">
                              <div class="flex gap-2">
                                  <button data-modal-toggle="edit-<?= $item['id']; ?>" class="text-blue-700"><i class="fas fa-edit"></i></button>
@@ -97,7 +98,7 @@
                                                      <input type="hidden" name="_method" value="PUT">
                                                      <div>
                                                          <label for="nama Produk" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Produk</label>
-                                                         <input type="text" name="nama_produk" id="nama_produk" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="<?= $item['nama_produk']; ?>" required>
+                                                         <input type="text" name="nama_produk" id="nama_produk" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="<?= $item['nama_produk']; ?>" required autofocus>
                                                      </div>
                                                      <div>
                                                          <label for=" warna" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Warna</label>
