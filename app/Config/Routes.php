@@ -36,9 +36,9 @@ $routes->get('/', 'BerandaController::index');
 $routes->get('/about', 'BerandaController::about');
 
 // crud
-$routes->post('/beranda', 'BerandaController::store');
+$routes->post('/', 'BerandaController::store');
 $routes->match(['put', 'post'], '/beranda/(:num)', 'BerandaController::update/$1');
-$routes->delete('/beranda/(:num)', 'BerandaController::delete/$1');
+$routes->delete('/(:num)', 'BerandaController::delete/$1');
 
 
 

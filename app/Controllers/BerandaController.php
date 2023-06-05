@@ -64,7 +64,7 @@ class BerandaController extends Controller
         ];
 
         if ($this->berandaModel->insert($data)) {
-            return redirect()->to('/beranda')->with('success', 'Data berhasil ditambahkan.');
+            return redirect()->to('/')->with('success', 'Data berhasil ditambahkan.');
         } else {
             return redirect()->back()->withInput()->with('error', 'Gagal menambahkan data.');
         }
@@ -86,7 +86,7 @@ class BerandaController extends Controller
         ];
 
         if ($this->berandaModel->update($id, $data)) {
-            return redirect()->to('/beranda')->with('success', 'Data berhasil diperbarui.');
+            return redirect()->to('/')->with('success', 'Data berhasil diperbarui.');
         } else {
             return redirect()->back()->withInput()->with('error', 'Gagal memperbarui data.');
         }
@@ -95,7 +95,7 @@ class BerandaController extends Controller
     public function delete($id)
     {
         if ($this->berandaModel->delete($id)) {
-            return redirect()->to('/beranda')->with('success', 'Data berhasil dihapus.');
+            return redirect()->to('/')->with('success', 'Data berhasil dihapus.');
         } else {
             return redirect()->back()->with('error', 'Gagal menghapus data.');
         }

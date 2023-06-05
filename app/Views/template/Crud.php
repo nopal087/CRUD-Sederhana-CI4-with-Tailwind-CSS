@@ -15,7 +15,7 @@
                      </button>
                      <div class="px-6 py-6 lg:px-8">
                          <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Tambah Data</h3>
-                         <form class="space-y-6" action="<?= base_url('/beranda') ?>" method="post">
+                         <form class="space-y-6" action="<?= base_url('/') ?>" method="post">
                              <!-- <?= csrf_field() ?> -->
                              <div>
                                  <label for="nama Produk" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Produk</label>
@@ -136,7 +136,7 @@
                                                  </svg>
                                                  <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete this product?</h3>
                                                  <div class="flex justify-center">
-                                                     <form action="<?= base_url('/beranda/' . $item['id']) ?>" method="post">
+                                                     <form action="<?= base_url('/' . $item['id']) ?>" method="post">
                                                          <?= csrf_field() ?>
                                                          <input type="hidden" name="_method" value="DELETE">
                                                          <button data-modal-hide="popup-modal" type="submit" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
